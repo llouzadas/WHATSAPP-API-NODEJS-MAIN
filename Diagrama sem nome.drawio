@@ -1,4 +1,4 @@
-<mxfile modified="2024-02-20T20:12:14.802Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" etag="MQ0oaC-GwAV9hD6esfuo" version="23.1.5" type="github">
+<mxfile modified="2024-02-20T20:16:12.367Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" etag="iRUan6rG42aSGJ55pNIN" version="23.1.5" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="918" dy="498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -185,7 +185,7 @@
           <mxGeometry x="500" y="74" width="101.4" height="65.5" as="geometry" />
         </mxCell>
         <mxCell id="4dynubgF51ZRnNJFd6d_-312" value="Docker" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3b3a3a;" vertex="1" parent="1">
-          <mxGeometry x="513.5500000000001" y="140" width="54.3" height="30" as="geometry" />
+          <mxGeometry x="523.5500000000001" y="139.5" width="54.3" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4dynubgF51ZRnNJFd6d_-339" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f5f5f5;strokeColor=#666666;" edge="1" parent="1" source="4dynubgF51ZRnNJFd6d_-318" target="UEzPUAAOIrF-is8g5C7q-114">
           <mxGeometry relative="1" as="geometry" />
@@ -200,7 +200,7 @@
           <mxGeometry x="640" y="70" width="100.29" height="54" as="geometry" />
         </mxCell>
         <mxCell id="4dynubgF51ZRnNJFd6d_-337" value="Pipeline" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#4a4a4a;" vertex="1" parent="1">
-          <mxGeometry x="650.1500000000001" y="130" width="60" height="30" as="geometry" />
+          <mxGeometry x="660.1400000000001" y="124" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4dynubgF51ZRnNJFd6d_-340" value="Esteira deploy Aws/Pipeline/CodeCommit" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="480" y="40" width="240" height="30" as="geometry" />
