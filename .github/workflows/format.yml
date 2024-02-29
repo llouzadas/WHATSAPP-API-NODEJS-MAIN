@@ -11,6 +11,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
               with:
+                  force: true
                   ref: ${{ github.head_ref }}
                   github-token: ${{ secrets.token }}
 
