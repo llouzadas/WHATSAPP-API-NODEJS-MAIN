@@ -13,7 +13,7 @@ jobs:
               with:
                   force: true
                   ref: ${{ github.head_ref }}
-                  github-token: ${{ secrets.token }}
+                  github-token: ${{ secrets.ACCESS_TOKEN }}
 
             - uses: actions/setup-node@v1
               with:
