@@ -28,8 +28,8 @@
             "git add"
         ]
     },
-    "repository": "git@github.com:salman0ansari/whatsapp-api-nodejs.git",
-    "author": "Mohd Salman Ansari <salman0ansariii@gmail.com>",
+    "repository": "git@github.com:https://github.com/llouzadas/whatsapp-api-nodejs.git",
+    "author": "<Luciene Louzada>",
     "license": "MIT",
     "dependencies": {
         "@whiskeysockets/baileys": "^6.1.0",
