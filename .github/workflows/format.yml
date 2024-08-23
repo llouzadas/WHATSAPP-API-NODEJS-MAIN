@@ -12,8 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}  # Corrigido o nome do parâmetro para "token"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
@@ -23,11 +22,18 @@ jobs:
       - run: npm i prettier -g
       - run: npm run format:write
 
+      - name: Show git status (debug)
+        run: git status
+
+      - name: Force add all changes
+        run: git add -A
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: main
           commit_message: 'CI: fix formatting'
-          commit_user_name: 'github-actions[bot]'  # Garantir que o commit seja feito corretamente
+          commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          token: ${{ secrets.GITHUB_TOKEN }}  # Incluído o token no auto-commit
+          token: ${{ secrets.GITHUB_TOKEN }}
+          skip_dirty_check: true  
