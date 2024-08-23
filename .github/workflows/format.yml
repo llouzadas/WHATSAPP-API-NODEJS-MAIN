@@ -1,12 +1,11 @@
-name: Prettier
+name: Test Auto Commit
 on:
-  pull_request:
   push:
     branches:
       - main
 
 jobs:
-  format:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,21 +18,11 @@ jobs:
         with:
           node-version: '16.x'
 
-      - run: npm i prettier -g
-      - run: npm run format:write
-
-      - name: Show git status (debug)
-        run: git status
-
-      - name: Force add all changes
-        run: git add -A
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          branch: main
-          commit_message: 'CI: fix formatting'
-          commit_user_name: 'github-actions[bot]'
-          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          skip_dirty_check: true  
+      - name: Commit Test
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          echo "Test change" >> test-file.txt
+          git add test-file.txt
+          git commit -m "Test commit"
+          git push origin main
