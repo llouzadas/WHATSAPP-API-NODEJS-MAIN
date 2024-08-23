@@ -25,4 +25,4 @@ jobs:
             - name: 📝 Running test
               run: yarn test
               env:
-                  TOKEN: ${{ secrets.TOKEN }}
+                  TOKEN: ${{ secrets.GITHUB_TOKEN }}
