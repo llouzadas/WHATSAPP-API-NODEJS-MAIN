@@ -1,27 +1,33 @@
 name: Prettier
 on:
-    pull_request:
-    push:
-        branches:
-            - main
+  pull_request:
+  push:
+    branches:
+      - main
 
 jobs:
-    format:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-              with:
-                  ref: ${{ github.head_ref }}
-                  github-token:  ${{ secrets.GITHUB_TOKEN }}
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}  # Corrigido o nome do parâmetro para "token"
 
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: '16.x'
-            - run: npm i prettier -g
-            - run: npm run format:write
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
 
-            - name: Commit changes
-              uses: stefanzweifel/git-auto-commit-action@v4
-              with:
-                  branch: main
-                  commit_message: 'CI: fix formatting'
+      - run: npm i prettier -g
+      - run: npm run format:write
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: main
+          commit_message: 'CI: fix formatting'
+          commit_user_name: 'github-actions[bot]'  # Garantir que o commit seja feito corretamente
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          token: ${{ secrets.GITHUB_TOKEN }}  # Incluído o token no auto-commit
